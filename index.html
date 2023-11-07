@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport"content="width=device-width,initial-scale=1.0" >
+    <title>cj's SnackHouse</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<style>
+    *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: bold;
+}
+body{ 
+   width: 100%;
+   height: 100vh;
+
+   background:url(./pinkBackground),no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+    
+ul li {
+   width: 20%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+margin: 0 20px;
+text-transform: capitalize;
+transition: ease 0.5s;
+
+   
+  
+}
+ul li a
+{text-decoration:none; color:black;
+  
+}
+.text {
+   background-color: rgb(241, 6, 84);
+}
+ul li :hover  {
+   border-bottom:1px solid green;
+   
+  
+}
+section{
+  width: 100%;
+  height: 100vh;
+}
+
+section header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+section header .logo{
+  font-size: 30px;
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+section header .logo span{
+  color:#ee0754d5;
+}
+
+section header ul{
+  list-style: none;
+}
+
+section header ul li{
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 5px 20px; 
+}
+
+section header ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+section header ul li a:hover{
+  color: white;
+}
+
+section header p{
+  cursor: pointer;
+  padding: 10px 25px;
+  border: 1px solid #f00956;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+section header p:hover{
+  color: white;
+  background: wheat;
+}
+
+section .texts h1{
+  position: absolute;
+  top: 60%;
+  left: 4%;
+  font-size: 50px;
+  color: #091cce;
+}
+
+section .texts h1 span{
+  color: #d80f52;
+}
+section .texts h2 strong{
+   color: blue;
+ }
+ 
+
+section .texts h3{
+  width: 650px;
+  position: absolute;
+  top: 80%;
+  left: 4%;
+  line-height: 26px;
+  text-align: justify;
+}
+
+section .background_image img{
+  width: 450px;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  margin-left: 25px;
+}
+
+section .bty{
+  position: relative;
+  top: 77%;
+  left: 38px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section .bty .read{
+  background: #e6e0e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section .bty p{
+  padding: 10px 25px;
+  background: none;
+  border: 2px solid #b36982;
+  cursor: pointer;
+}
+
+
+
+.about{
+  width: 100%;
+  height: 220vh;
+  padding: 50px;
+}
+
+.about .box{
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .box .card img{
+  width: 150px;
+  height: auto;
+  padding: 5px 10px;
+  margin: 0 15px;
+  background: rgb(134, 117, 117);
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.about .box .card:hover{
+  box-shadow: 3px 5px 20px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+  border-radius: px;
+}
+
+.about .box .card img{
+  width: 150px;
+}
+
+.about hr{
+  height: 2px;
+  background: #d98ca5;
+  border-radius: 5px;
+  margin: 30px 110px;
+}
+
+      /*menu*/
+
+.menu{
+  width:100%;
+  padding: 70px 0;
+
+}
+.menu h1{
+   font-size: 55px;
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 30px;
+}
+.menu h1 span{
+color: rgb(245, 12, 82);
+margin-left: 15px;
+font-family: mv boli;
+}
+
+.menu h1 span::after{
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: black;
+   display: block;
+   position: relative;
+   bottom: 15px;
+}
+.menu .menu_box{
+   width: 95%;
+   margin:0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 15px;
+
+}
+.menu .menu_box .menu_card{
+   width: 325px;
+   height: 480px;
+   padding-top: 10px;
+   margin-bottom: 20px;
+   box-shadow: 0 0 10px black;
+}
+
+.menu .menu_box .menu_card img{
+   width: 240px;
+   cursor: pointer;
+   transition: 0.3s;
+   
+}
+
+.menu .menu_box .menu_card img:hover{
+   transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .menu_btn{
+   text-decoration: none;
+   color: white;
+   padding: 7px 15px;
+   background:rgb(240, 4, 161);
+   text-align: center;
+   border-radius: 10px;
+   transition: 0.3s;
+}
+   
+button{
+   background-color: rgb(25, 9, 241);
+   color:black;
+   border-radius: 10px;
+   background: none;
+   width: 90px;
+   height: 40px;
+
+}
+.nav-link{
+   position: relative;
+     display: flex;
+   align-items: center;
+     justify-content: space-between;
+     
+ }
+ nav{
+     display: flex;
+ }
+ .footer_col .social_img{
+   width: 20px;
+   margin: 5px;
+}
+
+</style>
+<body>
+
+    <section>
+        <header>
+           
+            <a href="#" class="logo"> Cj's <span>SnackHouse</span></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">services</a></li>
+            </ul>
+           <button>Sign up</button>
+        </header>
+        
+    
+    <div class="texts">
+        
+        <h1>Pick  your  Favorite<br><span>Snacks  HERE!</span> </h1>
+        
+             <h2><strong>Perfect Snacks for your LoveOne</strong></h2>
+    </div>
+    </section>
+
+<!--About Page-->
+<hr>
+        <div class="about">
+            <div class="box">
+                <div class="card">
+                    <img src="coffee">
+                </div>
+                <div class="card">
+                    <img src="snackhouse menu">
+                </div>
+                <div class="card">
+                    <img src="delivery">
+                </div>
+            </div>
+        <hr>
+    <!--Menu-->
+    <div class="menu">
+        <h1>Our<span>Menu</span></h1>
+        <div class="menu_box">
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="Blended halo halo">
+                </div>
+    
+            <div class="menu_info">
+                <h2>Blended Halo-halo</h2>
+                <p>Looking for a refreshing treat to beat the summer heat?<br> Look no further than our newest product: Halo-halo!</p>
+                <h3>P85.00</h3>
+                <br>
+                <a href="#" class="menu_btn">Order Now  </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="menu">
+    <div class="menu_box">
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src='iced coffee'> 
+            </div>
+           
+        <div class="menu_info">
+            <h2>Classic milktea</h2>
+            <p> Experience best-tasting Classic Milk Tea</p>
+            <h3>P55.00</h3> <br>
+            <a href="#" class="menu_btn">Order Now  </a>
+    </div>
+</div>
+    </div>
+    </div>
+    <div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='milktea'>
+         </div>
+    
+    <div class="menu_info">
+        <h2>Brewed Coffee</h2>
+        <p>Refreshingly Freshly Brewed Coffee <br>mixed with iced and fresh milk.</p>
+        <h3>P55.00</h3> 
+        <br>
+        <a href="#" class="menu_btn">Order Now  </a>
+    </div>
+</div>
+</div>
+    </div>
+    <div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='cheesy bacon'> 
+        </div>
+        
+    <div class="menu_info">
+        <h2>Cheesy Bacon Fries</h2>
+        <p>Try our New Cheesy Bacon Fries at Cj's Snackhouse</p>
+        <h3>P65.00</h3><br>
+        <a href="#" class="menu_btn">Order Now  </a>
+    </div>
+</div>
+</div>
+    </div>
+    <div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='nachos'> 
+        </div>
+        
+    <div class="menu_info">
+        <h2>Bacon Nachos</h2>
+        <p>Try our New Cheesy Bacon Nachos at Cj's Snackhouse</p>
+        <h3>P65.00</h3> <br>
+        
+        <a href="#" class="menu_btn">Order Now  </a>
+    </div>
+    </div>
+</div>
+    </div>
+    <div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='Cheeseburger.jpg'> </div>
+    <div class="menu_info">
+        <h2>Cheese Burger</h2>
+        <p>teasty burger</p>
+        <h3>P45.00</h3><br>
+        <a href="#" class="menu_btn">Order Now  </a>
+    </div>
+</div>
+</div>  
+    </div>
+    <div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='ultimate-hamburger.webp'> </div>
+    <div class="menu_info">
+        <h2>ultimate-hamburger</h2>
+        <p>Yummy Burger</p>
+        <h3>P55.00</h3><br>
+        <a href="#" class="menu_btn">Order Now  </a> 
+    </div>
+</div>
+</div>
+    </div>
+<br>
+<div class="menu">
+<div class="menu_box">
+    <div class="menu_card">
+        <div class="menu_image">
+            <img src='french-fries.webp'> </div>
+    <div class="menu_info">
+        <h2>French-fries</h2>
+        <h3>P35.00</h3><br>
+        <a href="#" class="menu_btn">Order Now  </a> 
+    </div>
+</div>
+</div>
+</div>
+<br>
+
+
+    <!---fotter--->
+
+    <footer class="footer">
+        <div class="main">
+            <div class="row">
+                <div class="nav-link">  
+                <nav > 
+
+                    <h4>Company</h4>
+                    <ul>
+                        <li> <a href="#">AboutUs</a></li>
+                        <li> <a href="#">OurServices</a></li>
+                        <li> <a href="#">PrivacyPolicy</a></li> 
+                    </ul>
+             
+                <nav>
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li> <a href="#">FAQ</a></li>
+                        <li> <a href="#">Shipping</a></li>
+                        <li> <a href="#">Returns</a></li>
+                        <li> <a href="#">PaymentOptions</a></li> 
+                    </ul>
+                </nav>
+
+         <nav>
+                    <h4>Product</h4>
+                    <ul>
+                        <li> <a href="#">Halohalo</a></li>
+                        <li> <a href="#">milkTea</a></li>
+                        <li> <a href="#">BaconNachos</a></li>
+                        <li> <a href="#">Burger</a></li> 
+                    </ul>
+                    
+         </nav>
+         <nav>
+                    <h4>Please Follow  my social media Account: </h4>
+                    <div class="social_img">
+                        <a href="https://www.facebook.com/joysegura02?mibextid=ZbWKwL"> facebook ,</a>
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fjoysegura02%3Figshid%3DNGVhN2U2NjQ0Yg%2
+                        53D%253D%26fbclid%3DIwAR04Z3WBm4dx8C00amCY3kp-r6h66lRKNXkLzOT9tivgCn0WWbJFwZxH1_8&h=AT3Cw8KVkYE5aKIv_qYl3gfpjdLxXwFbHIN
+                        LOq9kBKCIS2YLMgJ5Gxmzw-W9dN9K-_s-r7mitkk02KkK_D-xLjFtjB7naDkeCCyGTdvhpS2lttYQNFzHyOIxnYFzI8bq30m0WA">Instragram</a> 
+            </nav>
+                    </div>
+        </footer>
+</body>
+</html>
